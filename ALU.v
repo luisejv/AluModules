@@ -1,3 +1,5 @@
+`include "Mux2to1.v"
+
 module ALU (
 		input [31:0] A,
 		input [31:0] B,
@@ -19,6 +21,4 @@ Mux2to1 mux2 (XorOutput, NorOutput, AluOpCode[0], clk, MuxOut2);
 Mux2to1 mux3 (MuxOut1, MuxOut2, AluOpCode[1], clk, MuxOut3);
 Mux2to1 mux4 (ArithOutput, MuxOut3, AlupOpCode[2], clk, Result);
 //assign Zero =  
-
-
 endmodule
